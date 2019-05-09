@@ -1,0 +1,14 @@
+.brand {
+    background-color: $color-neon;
+    text-align: center;
+
+    &__logo {
+        height: 7rem;
+        width: auto;
+        margin-top: 1.5rem;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+}
