@@ -1,0 +1,68 @@
+.hero-wrapper {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.hero {
+    text-transform: uppercase;
+    flex: 1;
+
+    &__heading {
+        font-weight: 700;
+        font-size: 10rem;
+        font-size-adjust: 0.58;
+        margin-top: 1.5rem;
+    }
+
+    &__sub-heading {
+        font-size: 3.25rem;
+        font-weight: 500;
+        color: $color-light-1;
+        margin-top: -7rem;
+    }
+
+    &__btn {
+        background-color: $color-neon;
+        padding: .5rem 6rem;
+        border-radius: 10rem;
+        margin-top: .5rem;
+        display: inline-block;
+    }
+
+    &__photo-box {
+        height: 40rem;
+        width: auto;
+        flex: 1;
+    }
+
+    &__photo {
+        height: 100%;
+        width: auto;
+        display: block;
+    }
+}
+
+// Nike
+.nike {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__quote {
+        color: $color-light-1;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    &__justdoit {
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+
+    &__logo {
+        align-self: center;
+        height: 4rem;
+        width: auto;
+    }
+}
