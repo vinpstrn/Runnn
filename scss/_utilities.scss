@@ -1,8 +1,17 @@
-.p-2by8 {
-    padding: 2rem 8rem;
-}
 
-.p-1by8 {
-    padding: 1rem 8rem;
+// PADDING
+.p-2by8 { padding: 2rem 8rem; }
+.p-1by8 { padding: 1rem 8rem; }
+
+// TEXT COLOR
+.txt-neon { color: $color-neon; }
+.txt-gray { color: $color-gray; }
+.txt-dark { color: $color-dark; }
+.txt-red { color: $color-red; }
+
+// Active
+.active,
+.sale__shoe-box:hover {
+    background-color: $color-neon !important;
 }
 

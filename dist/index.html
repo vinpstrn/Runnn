@@ -63,6 +63,78 @@
             <img src="images/vans_white.png" class="brand__logo" alt="Vans logo">
         </section>
 
+        <main class="sale p-2by8">
+            <h2 class="m-heading txt-neon sale__heading"> We are on sale now</h1>
+            <p class="m-sub-heading txt-gray sale__sub-heading"> Grab these awesome shoes now </p>
+
+            <div class="sale__box">
+                <div class="sale__main-shoe-wrapper">
+                    <div class="sale__main-shoe-box"> <!-- MAIN SHOE ITEM 1 -->
+                        <img class="sale__main-shoe-photo" src="images/Nike_free_rn_2018-main.png" alt="Nike acg flywire">
+                    </div>
+                    <div class="sale__main-shoe-box"> <!-- MAIN SHOE ITEM 2 -->
+                        <img class="sale__main-shoe-photo" src="images/Nike_acg_flywire-main.png" alt="Nike acg flywire">
+                    </div>
+                    <div class="sale__main-shoe-box"> <!-- MAIN SHOE ITEM 3 -->
+                        <img class="sale__main-shoe-photo" src="images/Adidas_ultraboost10-main.png" alt="Nike free rn 2018 shoes">
+                    </div>
+                    <div class="sale__main-shoe-box"> <!-- MAIN SHOE ITEM 4 -->
+                        <img class="sale__main-shoe-photo" src="images/jordan_6-main.png" alt="Nike free rn 2018 shoes">
+                    </div>
+                    <div class="sale__main-shoe-box"> <!-- MAIN SHOE ITEM 5 -->
+                        <img class="sale__main-shoe-photo" src="images/vans-sk8-Hi-main.png" alt="Nike free rn 2018 shoes">
+                    </div>
+                </div>
+                <h2 class="m-sub-heading txt-dark sale__title" id="sale__title"></h2>
+                <div class="sale__price-box">
+                    <span class="txt-gray sale__price-from"> From $<span class="sale__price-np"></span></span>
+                    <span class="txt-dark"><strong> Now $<span class="sale__price-now"> </span> </strong> </span>
+                </div>
+                <div class="sale__sizecart-box">
+                    <div class="sale__size-box">
+                        <svg class="sale__size-arrow" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L6.18393 7.65063L12.3679 1.08123e-06L9.98107 8.72573e-07L6.18393 4.69774L2.3868 2.0866e-07L0 0Z" fill="white"/></svg>
+                        <span class="sale__shoe-size"> Shoe size </span>
+                        <div class="sale__sizes-box-wrapper">
+                            <div class="sale__sizes-box">
+                                <div class="sale__sizes-item"> US 7 </div>
+                                <div class="sale__sizes-item"> US 7.5 </div>
+                                <div class="sale__sizes-item"> US 8 </div>
+                                <div class="sale__sizes-item"> US 8.5 </div>
+                                <div class="sale__sizes-item"> US 9 </div>
+                                <div class="sale__sizes-item"> US 9.5 </div>
+                                <div class="sale__sizes-item"> US 10 </div>
+                                <div class="sale__sizes-item"> US 10.5 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sale__add-cart-box">
+                        Add to cart
+                    </div>
+                </div>
+            </div>
+
+            <div class="sale__shoe-wrapper">
+                <div class="sale__shoe-box">
+                    <img class="sale__shoe" src="images/Nike_free_rn_2018-sm.png" onclick="currentSlide(1)" alt="Nike free rn 2018">
+                </div>
+                <div class="sale__shoe-box">
+                    <img class="sale__shoe" src="images/Nike_acg_flywire.png" onclick="currentSlide(2)" alt="Nike Acg Flywire">
+                </div>
+                <div class="sale__shoe-box">
+                    <img class="sale__shoe" src="images/Adidas_ultraboost10.png" onclick="currentSlide(3)" alt="Adidas Ultraboost 10">
+                </div>
+                <div class="sale__shoe-box">
+                    <img class="sale__shoe" src="images/jordan_6.png" onclick="currentSlide(4)" alt="Jordan 6">
+                </div>
+                <div class="sale__shoe-box">
+                    <img class="sale__shoe" src="images/vans-sk8-Hi.png" onclick="currentSlide(5)" alt="Vans sk8 High">
+                </div>
+                <button onclick="plusSlides(-1)" class="sale__prev-btn sale__btn"> <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-7.21238e-07 14.5L24.75 0.21058L24.75 28.7894L-7.21238e-07 14.5Z" fill="#0FBCD3"/></svg> </button>
+                <button onclick="plusSlides(1)" class="sale__next-btn sale__btn"> <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 14.5L0.250001 0.21058L0.25 28.7894L25 14.5Z" fill="#0FBCD3"/></svg></button>
+            </div>
+        </main>
+
     </div> <!-- END OF CONTAINER -->
+<script src="js/main.js"></script>
 </body>
 </html>

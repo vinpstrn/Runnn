@@ -1,0 +1,153 @@
+.sale {
+    text-align: center;
+
+    &__heading {
+        margin-bottom: -1.5rem;
+    }
+
+    &__box {
+        margin-top: 4rem;
+    }
+
+
+    &__main-shoe-wrapper {
+        position: relative;
+    }
+
+    &__main-shoe-box {
+        display: none;
+        height: 31.4rem;
+        width: 50rem;
+        margin: 0 auto;
+    }
+
+    &__main-shoe-photo {
+        display: block;
+    }
+
+    &__price-from {
+        font-weight: 300;
+    }
+
+    &__price-np {
+        text-decoration: line-through;
+    }
+
+    &__sizecart-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+
+        & > * {
+            background-color: $color-neon;
+            text-transform: uppercase;
+            padding: .5rem 3rem;
+        }
+    }
+
+    &__size-box {
+        margin-right: 3rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        transition: background-color .5s;
+
+        &:hover {
+            background-color: darken($color-neon, 10%);
+        }
+
+        &:hover .sale__size-arrow {
+            transform: rotate(90deg);
+        }
+
+        &:hover .sale__sizes-box-wrapper {
+            display: block;
+        }
+    }
+
+    &__size-arrow {
+        display: block;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: .5rem;
+        transition: all .2s;
+    }
+
+    &__sizes-box-wrapper {
+        display: none;
+    }
+
+    &__sizes-box {
+        position: absolute;
+        left: -30rem;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 15rem);
+    }
+
+    &__sizes-item {
+        padding: .5rem;
+        background-color: $color-neon;
+        border-top: 1px solid $color-light;
+        border-right: 1px solid $color-light;
+        transition: background-color .5s;
+
+        &:hover {
+            background-color: darken($color-neon, 10%);
+        }
+    }
+
+    &__add-cart-box {
+        
+    }
+
+    &__shoe-wrapper {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+
+        & > * {
+            background-color: $color-light;
+            padding: .5rem 1rem;
+        }
+    }
+
+    &__shoe-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15rem;
+        width: 23rem;
+        margin-top: 5rem;
+        cursor: pointer;
+        transition: background-color .2s ease-in;
+
+        img {
+            display: block;
+            height: 10rem;
+            width: auto;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 10rem;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__prev-btn {
+        left: -5rem;
+
+    }
+    &__next-btn {
+        right: -5rem;
+    }
+
+}
