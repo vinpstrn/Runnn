@@ -1,5 +1,6 @@
 
-// Shoes gallery slideshow
+// Shoes gallery slideshow for sale section
+{
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -35,6 +36,8 @@ function showSlides(n) {
   priceBeforeUI.innerHTML = priceBefore[slideIndex-1];
   priceAfterUI.innerHTML = priceAfter[slideIndex-1];
 }
+}
+
 
 // Shoe Size
 var shoeSizes = [7,7.5,8,8.5,9,9.5,10,10.5];
@@ -46,3 +49,64 @@ shoeSizesUI.forEach(function(size, index) {
     shoeSizeTitle.innerHTML = `Shoe size: ${shoeSizes[index]}`;
   });
 });
+
+// Slideshow for new arrival
+var slideIndexNew = 1;
+showSlidesNew(slideIndexNew);
+
+// function plusSlidesNew(num) {
+//   showSlidesNew(slideIndexNew += num);
+// }
+
+function currentSlideNew(num) {
+  showSlidesNew(slideIndexNew = num);
+  if(num - 1 === 0) {
+    mainShoesArr[num - 1].src = `images/new-arriaval-lebron-white.png`;
+  } else if (num - 1 === 1) {
+    mainShoesArr[num - 1].src = `images/dame-4.png`;
+  } else {
+    mainShoesArr[num - 1].src = `images/jordan-3-white.png`;
+  }
+}
+
+function showSlidesNew(num) {
+  var j;
+  var slidesNew = document.getElementsByClassName("slideshow-wrapper");
+  var dotsNew = document.getElementsByClassName("new__slideshow");
+  if (num > slidesNew.length) {slideIndexNew = 1}    
+  if (num < 1) {slideIndexNew = slidesNew.length}
+  for (j = 0; j < slidesNew.length; j++) {
+      slidesNew[j].style.display = "none";
+  }
+  for (j = 0; j < dotsNew.length; j++) {
+      dotsNew[j].className = dotsNew[j].className.replace("active", "");
+  }
+  slidesNew[slideIndexNew-1].style.display = "block";  
+  dotsNew[slideIndexNew-1].className += " active";
+}
+
+// Shoe color (Choose color) (Lebron 32)
+  var shoeArr = [`images/lebron32-maroon.png`,
+                 `images/lebron32-green.png`,
+                 `images/lebron32-black.png`,
+                 `images/dame-4-red.png`,
+                 `images/dame-4-yellow.png`,
+                 `images/dame-4-blue.png`,
+                 `images/jordan-3-yellow.png`,
+                 `images/jordan-3-orange.png`,
+                 `images/jordan-3-violet.png`,];
+  
+  var colors = document.querySelectorAll('.new__color');
+  var mainShoes = document.querySelectorAll('.new__shoe');
+  
+  colorsArr = Array.from(colors);
+  mainShoesArr = Array.from(mainShoes);
+  
+  colorsArr.forEach(function(color, index) {
+    color.addEventListener('click',function() {
+      for(var i = 0; i < mainShoesArr.length; i++) {
+        mainShoesArr[i].src = shoeArr[index];
+      }
+    });
+  });
+

@@ -1,0 +1,106 @@
+.new {
+    background-color: #c4c4c9;
+    position: relative;
+    height: 100vh;
+
+    &__shoe-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90rem;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8rem;
+    }
+
+    &__header {
+        width: 45rem;
+        color: $color-dark;
+    }
+
+    &__heading {
+        font-size: 6rem;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__description {
+        font-family: $font-secondary;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.8;
+    }
+
+    &__color-box {
+        margin-top: 4rem;
+    }
+
+    &__color-title {
+        color: $color-dark;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: $font-secondary;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__color-wrapper {
+        display: flex;
+    }
+
+    &__color {
+        height: 5rem;
+        width: 5rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 999;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        &--maroon {background-color: $color-maroon;}
+        &--green {background-color: $color-green;}
+        &--black {background-color: $color-black;}
+        &--red {background-color: $color-red;}
+        &--yellow {background-color: $color-yellow;}
+        &--blue {background-color: $color-blue;}
+        &--yellow-1 {background-color: $color-yellow-1;}
+        &--orange {background-color: $color-orange;}
+        &--violet {background-color: $color-violet;}
+
+
+    }
+
+    &__slideshow-box {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__slideshow {
+        height: .5rem;
+        width: 3rem;
+        background-color: $color-white;
+        border-radius: 10rem;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}
+
