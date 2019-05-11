@@ -2,6 +2,13 @@
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: 500;
+    font-family: $font-primary;
+
+    &--sans {
+        font-family: $font-secondary;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
 }
 
 .m-sub-heading {

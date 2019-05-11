@@ -1,0 +1,35 @@
+.footer {
+    position: relative;
+    padding-top: 30rem;
+
+    &__wrapper {
+        justify-content: center;
+        display: flex;
+    }
+
+    &__box {
+        height: 4rem;
+        width: 4rem;
+        
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    &__copyright {
+        color: $color-dark;
+        font-family: $font-secondary;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 1rem;
+        padding-bottom: 6rem;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
+}

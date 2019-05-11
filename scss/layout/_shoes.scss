@@ -1,0 +1,160 @@
+.shoes {
+    font-family: $font-secondary;
+
+    &--women {
+        background-color: $color-pink-1;
+    }
+
+    &--men {
+        background-color: $color-white;
+    }
+
+    &__wrapper { 
+        display: flex;
+        margin-top: 4rem;
+
+        & > * {
+            flex: 1;
+        }
+
+    }
+
+    &__box {
+        padding: 3rem;
+        text-align: center;
+
+        &--women {
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+
+        &--men {
+            &:not(:last-child) {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    &__list {
+        margin-top: 3rem;
+
+        &--women {
+            margin-left: 1rem;
+        }
+
+        &--men {
+            margin-right: 1rem;
+           float: right;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+
+        svg {
+            margin-right: .75rem;
+        }
+    }
+
+    &__img-box {
+        width: 43rem;
+        margin: 0 auto;
+        height: auto;
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    &__btn {
+        background-color: $color-red-1;
+        padding: .25rem 5rem;
+        text-transform: uppercase;
+        font-family: $font-primary;
+        display: inline-block;
+
+        &--women {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        &--men {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        &--featured {
+            margin-top: 2rem;
+        }
+    }
+
+    &__featured-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    &__featured-box {
+        text-align: center;
+        padding: 1rem;
+        font-family: $font-primary;
+        color: $color-dark;
+
+        &--women {
+            background-color: $color-pink-1;
+
+        }
+
+        &--men {
+            background-color: $color-white;
+        }
+    }
+
+    &__featured-img-box {
+        width: 22rem;
+        height: auto;
+        margin-bottom: -1.5rem;
+    }
+
+    &__featured-img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__featured-title {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: $font-secondary;
+        font-size: 1.5rem;
+        margin-bottom: -1rem;
+    }
+
+    &__featured-price {
+        font-size: 2.5rem;
+        margin-bottom: -1rem;
+    }
+
+    &__featured-btn {
+        padding: .25rem 1.25rem;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        
+        &--women {
+            background-color: $color-pink-2;
+        }
+
+        &--men {
+            background-color: $color-neon;
+        }
+    }
+}
