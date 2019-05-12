@@ -61,11 +61,11 @@ showSlidesNew(slideIndexNew);
 function currentSlideNew(num) {
   showSlidesNew(slideIndexNew = num);
   if(num - 1 === 0) {
-    mainShoesArr[num - 1].src = `images/new-arriaval-lebron-white.png`;
+    mainShoesArr[num - 1].src = `optimized/new-arriaval-lebron-white.png`;
   } else if (num - 1 === 1) {
-    mainShoesArr[num - 1].src = `images/dame-4.png`;
+    mainShoesArr[num - 1].src = `optimized/dame-4.png`;
   } else {
-    mainShoesArr[num - 1].src = `images/jordan-3-white.png`;
+    mainShoesArr[num - 1].src = `optimized/jordan-3-white.png`;
   }
 }
 
@@ -86,15 +86,15 @@ function showSlidesNew(num) {
 }
 
 // Shoe color (Choose color) (Lebron 32)
-  var shoeArr = [`images/lebron32-maroon.png`,
-                 `images/lebron32-green.png`,
-                 `images/lebron32-black.png`,
-                 `images/dame-4-red.png`,
-                 `images/dame-4-yellow.png`,
-                 `images/dame-4-blue.png`,
-                 `images/jordan-3-yellow.png`,
-                 `images/jordan-3-orange.png`,
-                 `images/jordan-3-violet.png`,];
+  var shoeArr = [`optimized/lebron32-maroon.png`,
+                 `optimized/lebron32-green.png`,
+                 `optimized/lebron32-black.png`,
+                 `optimized/dame-4-red.png`,
+                 `optimized/dame-4-yellow.png`,
+                 `optimized/dame-4-blue.png`,
+                 `optimized/jordan-3-yellow.png`,
+                 `optimized/jordan-3-orange.png`,
+                 `optimized/jordan-3-violet.png`,];
   
   var colors = document.querySelectorAll('.new__color');
   var mainShoes = document.querySelectorAll('.new__shoe');
