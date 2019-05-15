@@ -18,7 +18,6 @@ searchInput.addEventListener('keydown', (e) => {
   }
 });
 
-
 // Shoes gallery slideshow for sale section
 {
 var slideIndex = 1;
