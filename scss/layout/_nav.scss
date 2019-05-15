@@ -141,7 +141,7 @@
 
     &__box {
         display: block;
-        background-color: $color-neon;
+        background-color: rgba($color-neon, 0.9);
         height: 6rem;
         width: 6rem;
         border-radius: 50%;
