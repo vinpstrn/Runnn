@@ -3,7 +3,32 @@
     display: flex;
     align-items: center;
 
+    @media (max-width: 61.86em) { // 990px
+        justify-content: space-between;
+    }
+
     &__logo-box {
         margin-right: 9rem;
+        height: 3.75rem;
+        width: auto;
+
+        @media (max-width: 69.38em) { // 1110px
+            height: 3rem;
+            width: auto;
+        }
+
+        @media (max-width: 56.25em) { // 900px
+            height: 2.5rem;
+            width: auto;
+        }
+
+        @media (max-width: 28.13em) { // 450px
+            height: 2rem;
+        }
+    }
+
+    &__logo {
+        height: 100%;
+        width: auto;
     }
 }

@@ -2,15 +2,28 @@
     display: flex;
     flex: 1;
     align-items: center;
+    position: relative;
+
+    @media (max-width: 61.86em) { // 990px
+        flex: 0;
+    }
 
     &__list {
         display: flex;
         margin-right: auto;
+
+        @media (max-width: 61.86em) { // 990px
+            display: none;
+        }
     }
 
     &__item {
         &:not(:last-child) {
-            margin-right: 4rem;
+            margin-right: 3rem;
+
+            @media (max-width: 79.69em) { // 1275px
+                margin-right: 2rem;
+            }
         }
     }
 
@@ -27,33 +40,44 @@
     &__search-box {
         margin-right: 1.5rem;
         display: flex;
+
+        @media (max-width: 61.86em) { // 990px
+            display: none;
+        }
+    }
+
+    &__search-wrap {
+        height: 3.5rem;
+        width: auto;
     }
 
     &__search-icon {
         cursor: pointer;
-    }
-
-    &__search-box:hover .nav__search-input {
-        opacity: 1;
-        transform: scale(1);
+        height: 100%;
+        width: auto;
     }
 
     &__search-input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9999;
         border: none;
         border-bottom: 1px solid $color-white;
-        background-color: transparent;
+        background-color: $color-gray;
         font-family: inherit;
         color: inherit;
-        opacity: 0;
-        transform: scale(0);
+        width: 80%;
+        display: none;
+        padding: .5rem 1rem;
         transition: all .5s;
         transform-origin: right;
         letter-spacing: .1rem;
 
         &::placeholder {
-            color: inherit;
+            color: $color-light;
             letter-spacing: 1px;
-            font-family: inherit;
+            font-family: $font-secondary;
             font-weight: 300;
         }
 
@@ -64,6 +88,13 @@
 
     &__cart-box {
         display: flex;
+        cursor: pointer;
+
+        &--main {
+            @media (max-width: 61.86em) { // 990px
+                display: none;
+            }
+        }
     }
 
     &__cart-item {
@@ -78,3 +109,216 @@
         justify-content: center;
     }
 }
+
+// Hamburger menu
+.hamburger {
+    display: block;
+    
+    @media (min-width: 61.86em) { // 990px
+        display: none;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__btn {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        z-index: 99999;
+        text-align: center;
+        cursor: pointer;
+
+        @media (max-width: 28.13em) { // 450px
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+    }
+
+    &__box {
+        display: block;
+        background-color: $color-neon;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 2rem;
+        right: 3rem;
+        z-index: 9000;
+        transition: transform .5s cubic-bezier(1, 0, 0, 1);
+        text-align: center;
+        overflow: hidden;
+
+        @media (max-width: 28.13em) { // 450px
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        top: 0;
+        left: -50%;
+        height: 100vh;
+        width: 0;
+        opacity: 0;
+        z-index: 9999;
+        transition: all .5s cubic-bezier(1, 0, 0, 1);
+    }
+
+    &__wrap {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%,-50%);
+        z-index: 9999;
+        width: 45rem;
+
+        @media (max-width: 28.13em) { // 450px
+            width: 30rem;
+        }
+        
+    }
+
+    &__search-box {
+        display: flex;
+        margin-bottom: 1.5rem;
+    }
+
+    &__search-input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $color-white;
+        color: $color-white;
+        text-align: center;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $color-white;
+            text-align: center;
+        }
+    }
+
+    &__search-icon {
+        cursor: pointer;
+    }
+
+    &__list {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 1.4rem;
+        }
+    }
+
+    &__link {
+        position: relative;
+        transition: color .5s;
+    }
+
+    &__link::before {
+        content: "";
+        position: absolute;
+        background-color: $color-white;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transition: transform .5s;
+        transform-origin: left;
+    }
+
+    &__link:hover::before {
+        transform: scaleX(1);
+    }
+
+    &__checkbox:checked ~ &__box {
+        transform: scale(90);
+    }
+
+    &__checkbox:checked ~ &__menu {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 1.9rem;
+        transition: all .2s;
+
+        @media (max-width: 28.13em) { // 450px
+            margin-top: 1.25rem;
+        }
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 3rem;
+            height: 2px;
+            background-color: $color-white;
+
+            @media (max-width: 28.13em) { // 450px
+                width: 2.5rem;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .3s;
+        }
+
+        &::before { 
+            top: -.9rem; 
+
+            @media (max-width: 28.13em) { // 450px
+                top: -.8rem;
+            }
+        }
+        &::after {
+            top: .9rem; 
+
+            @media (max-width: 28.13em) { // 450px
+                top: .8rem;
+            }
+        }
+    }
+
+    &__btn:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__btn:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__btn &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__btn &__icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    &__checkbox:checked + &__btn &__icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
+
+

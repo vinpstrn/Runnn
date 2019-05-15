@@ -6,8 +6,16 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: $color-neon;
+}
+
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; // 10px
+
+    @media (max-width: 75.66em) { // 1210px
+        font-size: 56.25% // 9px
+    }
 }
 
 body {

@@ -7,8 +7,11 @@
 
     &__box {
         margin-top: 4rem;
-    }
 
+        @media (max-width: 61.86em) { // 990px
+            position: relative;
+        }
+    }
 
     &__main-shoe-wrapper {
         position: relative;
@@ -19,10 +22,35 @@
         height: 31.4rem;
         width: 50rem;
         margin: 0 auto;
+
+        @media (max-width: 75.66em) { // 1210px
+            margin: 0 auto 2rem auto;
+        }
+
+        @media (max-width: 56.25em) { // 900px
+            width: 40rem;
+            height: 24rem;
+        }
+
+        @media (max-width: 50em) { // 800px
+           width: 35rem;
+           height: 20rem;
+        }
+
+        @media (max-width: 28.13em) { // 450px
+            width: 25rem;
+            height: 15rem;
+        }
+
+        @media (max-width: 23.5em) { // 376px
+            width: 22rem;
+            height: 12rem;
+        }
     }
 
     &__main-shoe-photo {
         display: block;
+        width: 100%;
     }
 
     &__price-from {
@@ -42,6 +70,10 @@
             background-color: $color-neon;
             text-transform: uppercase;
             padding: .5rem 3rem;
+
+            @media (max-width: 23.5em) { // 376px
+                padding: .5rem 1.25rem;
+            }
         }
     }
 
@@ -53,12 +85,20 @@
         cursor: pointer;
         transition: background-color .5s;
 
+        @media (max-width: 28.13em) { // 450px
+            font-size: 1.5rem;
+        }
+
         &:hover {
             background-color: darken($color-neon, 10%);
         }
 
         &:hover .sale__size-arrow {
             transform: rotate(90deg);
+
+            @media (max-width: 43.75em) { // 700px
+                transform: rotate(180deg);
+            }
         }
 
         &:hover .sale__sizes-box-wrapper {
@@ -72,6 +112,23 @@
         width: 1.5rem;
         margin-right: .5rem;
         transition: all .2s;
+
+        @media (max-width: 43.75em) { // 700px
+            margin-right: 1rem;
+        }
+    }
+
+    &__add-cart-box {
+        cursor: pointer;
+        transition: background-color .5s;
+
+        @media (max-width: 28.13em) { // 450px
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            background-color: darken($color-neon, 10%);
+        }
     }
 
     &__sizes-box-wrapper {
@@ -84,6 +141,16 @@
         bottom: 0;
         display: grid;
         grid-template-columns: repeat(2, 15rem);
+
+        @media (max-width: 61.86em) { // 990px
+            grid-template-columns: repeat(1, 15rem);
+            left: -15rem;
+        }
+
+        @media (max-width: 43.75em) { // 700px
+            bottom: 4.5rem;
+            left: 0;
+        }
     }
 
     &__sizes-item {
@@ -106,6 +173,10 @@
         & > * {
             background-color: $color-light;
             padding: .5rem 1rem;
+        }
+
+        @media (max-width: 61.86em) { // 990px
+            display: none;
         }
     }
 
@@ -132,18 +203,41 @@
         cursor: pointer;
         border: none;
         background-color: transparent;
+        z-index: 10000;
 
         &:focus {
             outline: none;
+        }
+
+        @media (max-width: 23.5em) { // 376px
+            top: 5rem;
         }
     }
 
     &__prev-btn {
         left: -5rem;
 
+        &--rwd {
+            left: 0;
+            display: block;
+
+            @media (min-width: 61.86em) { // 990px
+                display: none;
+            }
+        }
     }
+    
     &__next-btn {
         right: -5rem;
+
+        &--rwd {
+            right: 0;
+            display: block;
+
+            @media (min-width: 61.86em) { // 990px
+                display: none;
+            }
+        }
     }
 
 }

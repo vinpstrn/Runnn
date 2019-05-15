@@ -1,6 +1,15 @@
 .contact {
     height: 39rem;
     position: relative;
+    z-index: 9;
+
+    @media (max-width: 61.86em) { // 990px
+        height: 36rem;
+    }
+
+    @media (max-width: 43.75em) { // 700px
+        height: 60rem;
+    }
 
     &__form-wrapper {
         position: absolute;
@@ -20,6 +29,25 @@
         & > * {
             flex: 1;
             padding: 0 10rem;
+
+            @media (max-width: 69.38em) { // 1110px
+                padding: 0 4rem;
+            }
+        }
+  
+        @media (max-width: 50em) { // 800px
+            width: 100%;
+        }
+
+        @media (max-width: 43.75em) { // 700px
+            flex-direction: column-reverse;
+            bottom: -35%;
+        }
+    }
+
+    &__form-box:nth-child(1) {
+        @media (max-width: 43.75em) { // 700px
+            margin-top: 3rem;
         }
     }
 
@@ -69,6 +97,15 @@
         border-radius: 10rem;
         text-transform: uppercase;
         font-family: $font-primary;
+        transition: background-color .2s;
+
+        &:hover {
+            background-color: darken($color-neon, 10%);
+        }
+
+        @media (max-width: 69.38em) { // 1110px
+            display: block;
+        }
     }
 
     &__details-group {
@@ -86,5 +123,9 @@
     &__label {
         font-weight: 500;
         font-size: 1.7rem;
+
+        @media (max-width: 23.5em) { // 376px
+            font-size: 1.4rem;
+        }
     }
 }

@@ -2,6 +2,10 @@
     position: relative;
     padding-top: 30rem;
 
+    @media (max-width: 61.86em) { // 990px
+        padding-top: 25rem;
+    }
+
     &__wrapper {
         justify-content: center;
         display: flex;
@@ -10,6 +14,12 @@
     &__box {
         height: 4rem;
         width: 4rem;
+        cursor: pointer;
+        transition: transform .2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
         
         &:not(:last-child) {
             margin-right: 1.5rem;
@@ -31,5 +41,22 @@
         padding-bottom: 6rem;
         text-transform: uppercase;
         font-size: 1.3rem;
+
+        @media (max-width: 61.86em) { // 990px
+            padding-bottom: 3rem;
+        }
+
+        @media (max-width: 38.13em) { // 550px
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 25em) { // 367px
+            font-size: 1rem;
+        }
+
+        @media (max-width: 23.5em) { // 376px
+            font-size: .9rem;
+        }
     }
 }

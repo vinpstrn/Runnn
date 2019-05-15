@@ -4,14 +4,44 @@
     font-weight: 500;
     font-family: $font-primary;
 
+    @media (max-width: 56.25em) { // 900px
+        font-size: 2.5rem;
+    }
+
+    @media (max-width: 23.5em) { // 376px
+        span {
+            display: block;
+            margin-top: -2rem;
+        }
+    }
+
     &--sans {
         font-family: $font-secondary;
         font-size: 2.5rem;
         font-weight: 700;
+
+        @media (max-width: 56.25em) { // 900px
+            font-size: 2rem;
+        }
+
+        @media (max-width: 23.5em) { // 376px
+            span {
+                display: block;
+                margin-top: 0;
+            }
+        }
     }
 }
 
 .m-sub-heading {
     font-size: 1.5rem;
     text-transform: uppercase;
+
+    @media (max-width: 56.25em) { // 900px
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: 25em) { // 900px
+        margin-top: 1rem;
+    }
 }

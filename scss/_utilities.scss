@@ -1,17 +1,49 @@
 
 // Padding
-.p-1by8 { padding: 1rem 8rem; }
-.p-2by8 { padding: 2rem 8rem; }
+.p-1by8 { 
+    padding: 1rem 8rem;
+
+    @media (max-width: 56.25em) { // 900px
+        padding: 1rem 5rem;
+    }
+
+    @media (max-width: 43.75em) { // 700px
+        padding: 2rem 3rem;
+    }
+}
+.p-2by8 { 
+    padding: 2rem 8rem;
+    
+    @media (max-width: 61.86em) { // 990px
+        padding: 2rem 5rem;
+    }
+
+    @media (max-width: 43.75em) { // 700px
+        padding: 2rem 3rem;
+    }
+}
 .p-3by8 { padding: 3rem 8rem; }
 .p-4by8 { padding: 4rem 8rem; }
-.p-5by8 { padding: 5rem 8rem; }
+.p-5by8 { 
+    padding: 5rem 8rem; 
+
+    @media (max-width: 61.86em) { // 990px
+        padding: 2rem 3rem;
+    }
+}
 
 // Margin
 .m-b-0 { margin-bottom: 0 !important; }
 .m-b-1-5 { margin-bottom: 1.5rem !important; }
 .m-b-2 { margin-bottom: 2rem !important; }
 .m-b-3 { margin-bottom: 3rem !important; }
-.m-b-4 { margin-bottom: 4rem !important; }
+.m-b-4 { 
+    margin-bottom: 4rem !important;
+
+    @media (max-width: 43.75em) { // 700px
+        margin-bottom: 1.5rem !important;
+    }
+}
 .m-b-5 { margin-bottom: 5rem !important; }
  // Negative margin
 .m-b--1-5 { margin-bottom: -1.5rem; }
@@ -41,4 +73,9 @@
 .sale__shoe-box:hover {
     background-color: $color-neon !important;
 }
+
+// Toggle class for search
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.v-hidden { visibility: hidden !important; }
 

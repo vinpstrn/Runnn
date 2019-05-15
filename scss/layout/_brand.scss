@@ -2,13 +2,37 @@
     background-color: $color-neon;
     text-align: center;
 
-    &__logo {
-        height: 7rem;
-        width: auto;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    &__box {
+        width: 9rem;
+        height: auto;
+        justify-self: center;
         margin-top: 1.5rem;
 
         &:not(:last-child) {
-            margin-right: 5rem;
+            margin-right: 3rem;
         }
+
+        &:hover {
+            color: $color-light;
+        }
+
+        @media (max-width: 56.25em) { // 900px
+            width: 6rem;
+        }
+
+        @media (max-width: 25em) { // 400px
+            width: 4.5rem;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        height: auto;
     }
 }

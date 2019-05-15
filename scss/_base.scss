@@ -6,5 +6,8 @@
 .wrapper {
     height: 100vh;
     background-color: $color-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 

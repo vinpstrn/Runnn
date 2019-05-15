@@ -1,3 +1,23 @@
+// Search button
+const searchBtn = document.querySelector('.nav__search-icon');
+const searchInput = document.querySelector('.nav__search-input');
+const searchWrap = document.querySelector('.nav__search-wrapper');
+const closeBtn = document.querySelector('.nav__close-btn');
+const nav = document.querySelector('.nav__list');
+
+searchBtn.addEventListener('click', () => {
+  searchInput.classList.add('d-block');
+  searchInput.classList.add('fade');
+});
+
+searchInput.addEventListener('keydown', (e) => {
+  if(e.keyCode === 27) {
+    searchInput.classList.remove('d-block');
+  } else {
+    searchInput.style.borderBottom = '1px solid #0FBCD3';
+  }
+});
+
 
 // Shoes gallery slideshow for sale section
 {
